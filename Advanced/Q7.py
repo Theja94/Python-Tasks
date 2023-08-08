@@ -9,3 +9,22 @@ Input: [Sam, Alice, Mona] ,
 
 Output: [Sam: Commerce, Alice: Science , Mona: Computer]
 """
+
+_keys = ["Sam", "Alice", "Mona"]
+_values = ["Commerce", "Science", "Computer"]
+
+
+# using for loops
+# res = {}
+# for key in _keys:
+#     for value in _values:
+#         res[key] = value
+#         _values.remove(value)
+#         break
+
+
+# using dictionary comprehension
+res = {_keys[i]: _values[i] for i in range(len(_keys))}
+
+# Printing resultant dictionary
+print("Resultant dictionary is : " + str(res))

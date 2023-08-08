@@ -10,3 +10,16 @@ Input : “Robert000Smith000123”
 Output:
 { “first_name”: “Robert”, “last_name”: “Smith”, “id”: “123” }
 """
+import re 
+
+key_list = ["First Name", "Last Name", "id" ]
+def decode_str(string_):
+
+    x = re.split('0+', string_)
+    res = dict(zip(key_list, x))
+    return res
+
+
+if __name__ == "__main__":
+    usr_inpt = "“Robert0Smith000123”"
+    print(decode_str(usr_inpt))

@@ -8,3 +8,21 @@ screen.
 Note: Assume that words.txt does not contain any J alphabet
 otherwise.
 """
+
+import os
+
+cwd = os.getcwd()
+path_ = os.path.join(cwd,"demo.txt")
+
+def jtoi(path_):
+    file = open(path_,"r")
+    data = file.read()
+    for letter in data:
+        if letter == 'J':
+            print("I",end="")
+        else:
+            print(letter,end="")
+
+    file.close()
+
+jtoi(path_)
