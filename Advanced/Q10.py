@@ -28,7 +28,7 @@ Output: 2
 Explanation: B and C will not be able to get any computers. So the
 answer is 2.
 """
-MAX_CHAR = 26
+MAX_CHAR = 20
 
 
 def cust_details(n, s):
@@ -39,7 +39,7 @@ def cust_details(n, s):
 	occupied = 0 
 
 	for i in range(len(s)):
-
+        # Getting unicode value to compare letters
 		ind = ord(s[i]) - ord('A')
 		if seen[ind] == 0:
 			seen[ind] = 1
